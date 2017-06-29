@@ -1,0 +1,6 @@
+Notes:
+
+This is getting a little out of hand, in order to take full advantage of sublime, I need to get grunt and another similar program. In order to take advantage of grunt, and it's comparable program, I need to get node.js. In order to really take advantage of node.js I need to get an inline text editor. There are three of those, emacs, vim, and nano. Nano is the easiest, but vim is the one that you will use forever, or so they say. It's kind of crazy how many systems you need to install, (I guess that they're called dependencies) to get things running. I guess that's why you get a package manager, i.e. grunt, in order to get all of the requisite tools to get up and running. 
+
+I wonder how I'm going to be able to remember which dependencies to install, if my machine goes down. I guess that I'll have to make notes like this, and keep them on the repository :) 
+

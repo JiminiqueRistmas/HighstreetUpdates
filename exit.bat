@@ -1,1 +1,0 @@
-TASKKILL /F /IM sublime_text.exe & popd
