@@ -6,7 +6,21 @@
 	<p>or this</p>
 	<p>then this kind of shit</p>
 	<p>okay, so now when I press ctrl+s, to save the file, the display window automtically refreshes.</p><p>I'll have to figure out how to launch the window from sublime....</p>
+<form action="newfortune(newFortunes)">
+	Add a new fortune:<br>
+	<input type="text" name="newFortunes"><br>
+	<input type="submit" name="submit">
+	<input type="reset" name="reset">
+</form>
 
+<input type="button" name="newFortune" Value="Check your fortune" onclick="fortune()">
+<br>
+<br>
 <a href="highstreet.studio">highstreet.studio</a>
+<script>
+var a = [];
+function newFortune(fortune){a.push(fortune); return("thanks for adding <" + fortune + "> to the fortune compendium!")} 
+function fortune(){a[Math.round(Math.random * (a.length-1))];}
+</script>
 	</body>
 </html>
