@@ -1,0 +1,10 @@
+ANC extension project
+
+On the surface active noise canceling seems pretty straight forward, and it looks like a simple language like javaScript can handle the processing weight. 
+
+The plan is to launch either a chrome app, or a dedicated Saas site, to offer a user the ability to turn their microphone and headphones (hopefully a single unit) into a noise canceling device; to help increase productivity. 
+
+The applet should require the user to allow access to their microphone, and headphones. The applet will read all audio input from the mic, and return the opposite wavefrom than that which was received; theoretically canceling out the noise. The script will probably need to focus on somewhat static noises, i.e. fans, motors, wind, I'm guessing by way of some high/low pass filtering combination. Of course, the wave returned should also have a volume cap, so as not to provide an unpleasant experience. There are a few instances of successful ANC projects, shown on academic whitepages, none are written in javaScript, but I don't see that there would be too much of an issue transcribing the fucntion from one language to another. 
+
+prototype roadmap: learn how to receive, and process audio input in .js. learn how to produce soundwaves programatically. Test, to see how much latency plays into the equaiton. Test to see how well the routine is able to negate white noise. 
+

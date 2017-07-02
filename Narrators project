@@ -1,0 +1,16 @@
+Notes:
+
+
+Okay, so the plan will be to finish up and close out the little fortune cookie thingy. Then to decide which of the two roads to walk down, programattically speaking. 
+
+A) Narrated news app: crowdsourced voice acting, actors are paid to read the article. Their voice recording is sent to google API to be dictated into text. The text is then compared with the original article. Anything that receives a passing grade, for arguments sake 85% will do, will be published. The article will be available as an imbedded applet, and alternatively as a curated app. 
+
+There will be several basic articles which are constantly listed, to be recorded. The rest will come from user interest. Have 5 articles in the morning that you would be interested in hearing on your commute? The headline picker would be happy to connect you with narrators. 
+
+The narrators are paid per completion, and tipping is allowed. So good narrators will be rewarded for their hard work. Narrators will have a profile, which can be up voted, tipped, and commented on. This gives them the ability to create some sort of notoriety, which all of these type of people crave.
+
+I'll need to test a voice push to the google api, and see what I get in return. Hopefully it will be a fully dictated file. Then I'll need to find a way to compare the text. That shouldn't be too hard, since there are tons of anti-plaguerism sites out there. 
+
+In typing this I noticed that there needs to be some sort of either voting system, or verified login process, to make sure that people are using suitably professional equipment. I wonder if .js can detect the type of microphone being used / and if the file can be processed to detect how much 'noise' is in the recording...
+
+steps for a working prototype: voice recording to google dictation API. Dictated document vs. actual article %. User login, and submit for approval portal. playlist, and playback functionality. chrome extension. 
