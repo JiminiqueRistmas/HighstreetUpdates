@@ -2,25 +2,29 @@
 	<title>Test page</title>
 	<body>Here is some shit, and some more
 	<p>What happens when I just save this?</p>
-	<p>or this</p>
-	<p>or this</p>
-	<p>then this kind of shit</p>
-	<p>okay, so now when I press ctrl+s, to save the file, the display window automtically refreshes.</p><p>I'll have to figure out how to launch the window from sublime....</p>
-<form action="newfortune(newFortunes)">
-	Add a new fortune:<br>
+	<br>
+	<br>
+	<br>
+	<form action="file:///C:/Users/testbuy/Documents/GitHub/HighstreetUpdates/test.html">
+	Add a new fortune: <br>
 	<input type="text" name="newFortunes"><br>
-	<input type="submit" name="submit">
+
+	<input type="button" name="submit" value="Add a fortune" onclick="addFortune()">
 	<input type="reset" name="reset">
 </form>
 
-<input type="button" name="newFortune" Value="Check your fortune" onclick="fortune()">
+<input type="button" id="newFortune" name="newFortune" Value="Check your fortune" onclick="Fortune()">
 <br>
 <br>
 <a href="highstreet.studio">highstreet.studio</a>
 <script>
 var a = [];
-function newFortune(fortune){a.push(fortune); return("thanks for adding <" + fortune + "> to the fortune compendium!")} 
-function fortune(){a[Math.round(Math.random * (a.length-1))];}
+
+var newfortune = document.getElementById('newFortune').Value
+
+function addFortune(){a.push(newfortune);} 
+
+function fortune(){ alert(a[Math.round(Math.random() * a.length-1)]);}
 </script>
 	</body>
 </html>
