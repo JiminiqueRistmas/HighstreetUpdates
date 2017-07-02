@@ -1,5 +1,5 @@
-<html>
-	<title>Test page</title>
+<HTML>
+<!-- 	<title>Test page</title>
 	<body>Here is some shit, and some more
 	<p>What happens when I just save this?</p>
 	<br>
@@ -33,54 +33,10 @@ log("added new fortune");}
 
 function fortune(){ alert(a[Math.round(Math.random() * a.length-1)]);}
 </script>
+ -->
 
-
-
-
-<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  <script class="jsbin" src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
-  <script type="var titles  = [];
-var names   = [];
-var tickets = [];
-
-var titleInput  = document.getElementById("title");
-var nameInput   = document.getElementById("name");
-var ticketInput = document.getElementById("tickets");
-
-var messageBox  = document.getElementById("display");
-
-function insert ( ) {
- titles.push( titleInput.value );
- names.push( nameInput.value );
- tickets.push( ticketInput.value );
   
- clearAndShow();
-}
 
-function clearAndShow () {
-  // Clear our fields
-  titleInput.value = "";
-  nameInput.value = "";
-  ticketInput.value = "";
-  
-  // Show our output
-  messageBox.innerHTML = "";
-  
-  messageBox.innerHTML += "Titles: " + titles.join(", ") + "<br/>";
-  messageBox.innerHTML += "Names: " + names.join(", ") + "<br/>";
-  messageBox.innerHTML += "Tickets: " + tickets.join(", ");
-}"></script>
-<meta charset=utf-8 />
-<title>JS Bin</title>
-<!--[if IE]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-<style>
-  article, aside, figure, footer, header, hgroup, 
-  menu, nav, section { display: block; }
-</style>
-</head>
-<body>
   <form>
     <h1>Please enter data</h1>
     <input id="title" type="text" placeholder="Title" />
@@ -90,5 +46,39 @@ function clearAndShow () {
   </form>
   <div id="display"></div>
 
-	</body>
-</html>
+<script> 
+var titles  = [];
+var names   = [];
+var tickets = [];
+
+var titleInput  = document.getElementById("title").value;
+var ticketInput = document.getElementById("tickets").value;
+var nameInput = document.getElementById("name").value;
+var messageBox  = document.getElementById("display").value;
+
+function insert ( ) {
+ titles.push( titleInput );
+ names.push( nameInput );
+ tickets.push( ticketInput );
+  
+ clearAndShow();
+}
+
+function clearAndShow () {
+  // Clear our fields
+  titleInput = "";
+  nameInput = "";
+  ticketInput = "";
+  
+  // Show our output
+  messageBox.innerHTML = "";
+  
+  messageBox.innerHTML += "Titles: " + titles.join(", ") + "<br/>";
+  messageBox.innerHTML += "Names: " + names.join(", ") + "<br/>";
+  messageBox.innerHTML += "Tickets: " + tickets.join(", ");
+}
+	
+</script>
+
+
+</HTML>
