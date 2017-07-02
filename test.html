@@ -1,81 +1,58 @@
 <HTML>
-<!-- 	<title>Test page</title>
-	<body>Here is some shit, and some more
-	<p>What happens when I just save this?</p>
-	<br>
-	<br>
-	<br>
+ 	<title>Fortune Cookie</title>
 
-	<form action="file:///C:/Users/testbuy/Documents/GitHub/HighstreetUpdates/test.html">
-
-	Add a new fortune: <br>
-
-	<input type="text" name="newFortune" id="newFortune"><br>
-	<input type="button" name="submit" value="Add a fortune" onclick="addFortune()">
-	<input type="reset" name="reset">
-
-</form>
-
-<input type="button" name="checkFortune" Value="Check your fortune" onclick="Fortune()">
-
-<br>
-<br>
-
-<a href="highstreet.studio">highstreet.studio</a>
-
-<script>
-var a = [];
-
-var newFortune = document.getElementById('newFortune').Value
-
-function addFortune(newFortune){a.push(newfortune);
-log("added new fortune");} 
-
-function fortune(){ alert(a[Math.round(Math.random() * a.length-1)]);}
-</script>
- -->
 
   
 
   <form>
-    <h1>Please enter data</h1>
-    <input id="title" type="text" placeholder="Title" />
-    <input id="name" type="text" placeholder="Name" />
-    <input id="tickets" type="text" placeholder="Tickets" />
-    <input type="button" value="Save/Show" onclick="insert()" />
+    <h1>Check your fortune today!</h1>
+      <div id="display"></div>
+    <input type="button" value="Check my fortune" onclick="fortune()"/>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <input id="title" type="text" placeholder="Add new fortune" />
+    <input type="button" value="Add fortune" onclick="insert()" />
   </form>
-  <div id="display"></div>
+<div id="display2"></div>
 
 <script> 
 var titles  = [];
-var names   = [];
-var tickets = [];
+var titleInput  = document.getElementById("title");
+var test = document.getElementById("title");
+var messageBox  = document.getElementById("display");
+var messageBox2 = document.getElementById("display2");
 
-var titleInput  = document.getElementById("title").value;
-var ticketInput = document.getElementById("tickets").value;
-var nameInput = document.getElementById("name").value;
-var messageBox  = document.getElementById("display").value;
+function getFortune(){ 
+	return titles[Math.round(Math.random() * titles.length-1)];
+}
 
-function insert ( ) {
- titles.push( titleInput );
- names.push( nameInput );
- tickets.push( ticketInput );
-  
- clearAndShow();
+function fortune(){
+
+
+	messageBox.innerHTML = "Your fortune reads: " + getFortune();
+}
+
+
+
+function insert() {
+	function entry(){ return titleInput.value;}
+ 
+ titles.push(titleInput.value);
+
+ messageBox2.innerHTML = "Thanks for adding <" + entry() + "> to the fortune compendium!";
+
 }
 
 function clearAndShow () {
   // Clear our fields
   titleInput = "";
-  nameInput = "";
-  ticketInput = "";
   
   // Show our output
-  messageBox.innerHTML = "";
-  
-  messageBox.innerHTML += "Titles: " + titles.join(", ") + "<br/>";
-  messageBox.innerHTML += "Names: " + names.join(", ") + "<br/>";
-  messageBox.innerHTML += "Tickets: " + tickets.join(", ");
+ // messageBox.innerHTML = "";
+  messageBox.innerHTML += "Titles: " + titles + "<br/>";
 }
 	
 </script>
