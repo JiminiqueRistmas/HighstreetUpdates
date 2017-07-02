@@ -5,26 +5,35 @@
 	<br>
 	<br>
 	<br>
+	
 	<form action="file:///C:/Users/testbuy/Documents/GitHub/HighstreetUpdates/test.html">
-	Add a new fortune: <br>
-	<input type="text" name="newFortunes"><br>
 
+	Add a new fortune: <br>
+
+	<input type="text" name="newFortune" id="newFortune"><br>
 	<input type="button" name="submit" value="Add a fortune" onclick="addFortune()">
 	<input type="reset" name="reset">
+
 </form>
 
-<input type="button" id="newFortune" name="newFortune" Value="Check your fortune" onclick="Fortune()">
+<input type="button" name="checkFortune" Value="Check your fortune" onclick="Fortune()">
+
 <br>
 <br>
+
 <a href="highstreet.studio">highstreet.studio</a>
+
 <script>
 var a = [];
 
-var newfortune = document.getElementById('newFortune').Value
+var newFortune = document.getElementById('newFortune').Value
 
-function addFortune(){a.push(newfortune);} 
+function addFortune(newFortune){a.push(newfortune);
+log("added new fortune");} 
 
 function fortune(){ alert(a[Math.round(Math.random() * a.length-1)]);}
 </script>
+
+
 	</body>
 </html>
